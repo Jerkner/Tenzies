@@ -1,0 +1,145 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    box-sizing: border-box;
+        /* border: red solid 1px; */
+    user-select: none;
+    }
+
+body {
+    background-color: #0B2434;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 320px;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+h1,
+h2 {
+    width: 240px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2B283A;
+}
+
+h2 {
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #4A4E74;
+}
+
+.dice-container {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(5, 1fr);
+    gap: 18px;
+}
+
+
+.dice:hover,
+.dice:active {
+    border-radius: 10px;
+    background-color: rgb(195, 250, 195);
+}
+
+.dice,
+.dice-held {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dice-held {
+    background-color: #59E391;
+}
+
+button {
+    margin-top: 14px;
+    padding: 6px 21px;
+    border: none;
+    border-radius: 8px;;
+    background-color: #5035FF;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: inset 10px 10px 10px -6px rgba(0, 0, 0, 0.7);
+}
+
+.rerolls,
+.currentRecord {
+    display: flex;
+    justify-content: space-between;
+    width: 108px;
+    margin-top: 0.3em;
+}
+
+h4 {
+    font-size: 12px;
+}
+
+@media (min-width: 640px) {
+    main {
+        width: 620px;
+        height: 620px;
+        margin: 20px auto;
+    }
+
+    h1,
+    h2 {
+        width: 480px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        margin-bottom: 48px;
+        font-size: 28px;
+    }
+
+    .dice-container {
+        gap: 36px;
+    }
+
+    .dice,
+    .dice-held {
+        width: 72px;
+        height: 72px;
+    }
+
+    button {
+        margin-top: 28px;
+        padding: 12px 42px;
+        font-size: 48px;
+    }
+
+    .rerolls,
+    .currentRecord {
+        width: 216px;
+        margin-top: 0.6em;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+}
